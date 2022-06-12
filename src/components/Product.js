@@ -4,9 +4,9 @@ import Star from "./Star/Star";
 export default class Product extends Component {
   render() {
     const rating = Math.round(this.props.product.rating);
-    const RatingArray = new Array(rating);
+    const RatingArray = new Array(rating).fill(0, 0);
     const star = RatingArray.map((a, index) => {
-      return <Star key={index} />;
+      return <Star />;
     });
     console.log(star);
     return (
